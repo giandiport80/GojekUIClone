@@ -4,7 +4,8 @@ import {Image, StyleSheet, Text, TextInput, View} from 'react-native';
 const App = () => {
   return (
     <View style={{flex: 1}}>
-      <View style={{flex: 1, backgroundColor: 'pink'}}>
+      <View style={{flex: 1, backgroundColor: '#ccc'}}>
+        {/* search bar */}
         <View
           style={{marginHorizontal: 17, flexDirection: 'row', paddingTop: 15}}>
           <View style={{position: 'relative', flex: 1}}>
@@ -37,7 +38,105 @@ const App = () => {
             <Image source={require('./src/assets/icon/promo.png')} />
           </View>
         </View>
+        {/* gopay */}
+        <View style={{marginHorizontal: 17, marginTop: 8}}>
+          <View
+            style={{
+              flexDirection: 'row',
+              justifyContent: 'space-between',
+              backgroundColor: '#2c5fb8',
+              borderTopLeftRadius: 4,
+              borderTopRightRadius: 4,
+              padding: 14,
+            }}>
+            <Image source={require('./src/assets/icon/gopay.png')} />
+            <Text style={{fontSize: 17, fontWeight: 'bold', color: '#fff'}}>
+              Rp. 50.375
+            </Text>
+          </View>
+          <View
+            style={{
+              flexDirection: 'row',
+              paddingTop: 20,
+              paddingBottom: 14,
+              backgroundColor: '#2f64bd',
+              borderBottomLeftRadius: 4,
+              borderBottomRightRadius: 4,
+            }}>
+            <View
+              style={{
+                flex: 1,
+                alignItems: 'center',
+                fontSize: 1,
+              }}>
+              <Image source={require('./src/assets/icon/pay.png')} />
+              <Text
+                style={{
+                  fontSize: 13,
+                  color: '#fff',
+                  marginTop: 15,
+                  fontWeight: 'bold',
+                }}>
+                Pay
+              </Text>
+            </View>
+            <View
+              style={{
+                flex: 1,
+                alignItems: 'center',
+                fontSize: 1,
+              }}>
+              <Image source={require('./src/assets/icon/nearby.png')} />
+              <Text
+                style={{
+                  fontSize: 13,
+                  color: '#fff',
+                  marginTop: 15,
+                  fontWeight: 'bold',
+                }}>
+                Nearby
+              </Text>
+            </View>
+            <View
+              style={{
+                flex: 1,
+                alignItems: 'center',
+                fontSize: 1,
+              }}>
+              <Image source={require('./src/assets/icon/topup.png')} />
+              <Text
+                style={{
+                  fontSize: 13,
+                  color: '#fff',
+                  marginTop: 15,
+                  fontWeight: 'bold',
+                }}>
+                Top Up
+              </Text>
+            </View>
+            <View
+              style={{
+                flex: 1,
+                alignItems: 'center',
+                fontSize: 1,
+              }}>
+              <Image source={require('./src/assets/icon/more.png')} />
+              <Text
+                style={{
+                  fontSize: 13,
+                  color: '#fff',
+                  marginTop: 15,
+                  fontWeight: 'bold',
+                }}>
+                More
+              </Text>
+            </View>
+          </View>
+          <View></View>
+        </View>
       </View>
+
+      {/* bottom navigation */}
       <View style={{height: 54, flexDirection: 'row', backgroundColor: '#fff'}}>
         <View
           style={{
