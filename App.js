@@ -1,10 +1,17 @@
 import React from 'react';
-import {Image, StyleSheet, Text, TextInput, View} from 'react-native';
+import {
+  Image,
+  ScrollView,
+  StyleSheet,
+  Text,
+  TextInput,
+  View,
+} from 'react-native';
 
 const App = () => {
   return (
     <View style={{flex: 1}}>
-      <View style={{flex: 1, backgroundColor: '#fff'}}>
+      <ScrollView style={{flex: 1, backgroundColor: '#fff'}}>
         {/* search bar */}
         <View
           style={{marginHorizontal: 17, flexDirection: 'row', paddingTop: 15}}>
@@ -373,10 +380,41 @@ const App = () => {
             </View>
           </View>
         </View>
-      </View>
+
+        <View
+          style={{
+            height: 17,
+            backgroundColor: '#f2f2f4',
+            marginTop: 20,
+          }}></View>
+        {/* news section */}
+        <View style={{paddingTop: 16, paddingHorizontal: 17}}>
+          <View>
+            <Image
+              source={require('./src/assets/dummy/sepak-bola.jpg')}
+              style={{height: 170, width: '100%', borderRadius: 6}}
+            />
+          </View>
+          <View style={{paddingTop: 16, paddingBottom: 20}}>
+            <Text style={{fontSize: 16, fontWeight: 'bold', color: '#1c1c1c'}}>
+              GO-NEWS
+            </Text>
+            <Text style={{fontSize: 14, fontWeight: 'normal', color: '#7a7a7a'}}>
+              Dimas Drajat selamatkan penali, timnas U-23 kalahkan Brunei
+            </Text>
+          </View>
+        </View>
+      </ScrollView>
 
       {/* bottom navigation */}
-      <View style={{height: 54, flexDirection: 'row', backgroundColor: '#fff'}}>
+      <View
+        style={{
+          height: 54,
+          flexDirection: 'row',
+          backgroundColor: '#fff',
+          borderTopColor: '#efefef',
+          borderWidth: 1,
+        }}>
         <View
           style={{
             flex: 1,
