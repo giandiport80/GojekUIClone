@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, Text, Image} from 'react-native';
-import GopayFeature from '../../molecules/GopayFeature';
+import {GopayFeature} from '../../molecules';
 
 const HomeGopay = () => {
   return (

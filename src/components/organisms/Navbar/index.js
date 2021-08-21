@@ -1,6 +1,6 @@
 import React from 'react';
 import {View} from 'react-native';
-import NavbarIcon from '../../molecules/NavbarIcon';
+import {NavbarIcon} from '../../molecules';
 
 const Navbar = () => {
   return (

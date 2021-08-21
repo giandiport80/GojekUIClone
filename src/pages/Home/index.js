@@ -1,16 +1,21 @@
 import React from 'react';
 import {ScrollView, View} from 'react-native';
-import SearchFeature from '../../components/molecules/SearchFeature';
-import HomeGopay from '../../components/organisms/HomeGopay';
-import HomeMainFeature from '../../components/organisms/HomeMainFeature';
-import Divider from '../../components/atoms/Divider';
-import GoNews from '../../components/molecules/GoNews';
-import GoInfo from '../../components/molecules/GoInfo';
-import GoBanner from '../../components/molecules/GoBanner';
-import ScrollableProducts from '../../components/organisms/ScrollableProducts';
-import Navbar from '../../components/organisms/Navbar';
+import {useNavigation} from '@react-navigation/native';
+import {
+  Divider,
+  GoBanner,
+  GoInfo,
+  GoNews,
+  HomeGopay,
+  HomeMainFeature,
+  Navbar,
+  ScrollableProducts,
+  SearchFeature,
+} from '../../components';
 
-const Home = ({navigation}) => {
+const Home = () => {
+  const navigation = useNavigation();
+
   return (
     <View style={{flex: 1}}>
       <ScrollView style={{flex: 1, backgroundColor: '#fff'}}>

@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, Text, Image, ScrollView} from 'react-native';
-import ScrollableItem from '../../molecules/ScrollableItem';
+import {ScrollableItem} from '../../molecules';
 
 const ScrollableProducts = () => {
   return (

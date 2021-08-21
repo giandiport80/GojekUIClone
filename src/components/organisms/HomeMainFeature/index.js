@@ -1,6 +1,6 @@
 import React from 'react';
 import {View} from 'react-native';
-import MainFeature from '../../molecules/MainFeature';
+import {MainFeature} from '../../molecules';
 
 const HomeMainFeature = () => {
   return (
