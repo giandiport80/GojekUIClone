@@ -1,31 +1,20 @@
 import React from 'react';
-import {ScrollView, View} from 'react-native';
-import Divider from './components/atoms/Divider';
-import GoBanner from './components/molecules/GoBanner';
-import GoInfo from './components/molecules/GoInfo';
-import GoNews from './components/molecules/GoNews';
-import SearchFeature from './components/molecules/SearchFeature';
-import HomeGopay from './components/organisms/HomeGopay';
-import HomeMainFeature from './components/organisms/HomeMainFeature';
-import Navbar from './components/organisms/Navbar';
-import ScrollableProducts from './components/organisms/ScrollableProducts';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import {NavigationContainer} from '@react-navigation/native';
+import {Home, NewsDetail} from './pages';
+
+const Stack = createNativeStackNavigator();
 
 const App = () => {
   return (
-    <View style={{flex: 1}}>
-      <ScrollView style={{flex: 1, backgroundColor: '#fff'}}>
-        <SearchFeature />
-        <HomeGopay />
-        <HomeMainFeature />
-        <Divider />
-        <GoNews />
-        <GoInfo />
-        <GoBanner />
-        <ScrollableProducts />
-      </ScrollView>
-
-      <Navbar />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator
+        initialRouteName="Home"
+        screenOptions={{headerShown: false}}>
+        <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen name="News Detail" component={NewsDetail} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 };
 
